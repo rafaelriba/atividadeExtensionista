@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Estruturas de Repetição em Python</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Estruturas de Repetição em Python</h1>
+  </header>
+
+  <main>
+    <!-- 1. O que são estruturas de repetição? -->
+    <section>
+      <h2>1. O que são estruturas de repetição?</h2>
+      <p>
+        Estruturas de repetição são comandos que permitem executar um bloco de código várias vezes de forma automática. Elas facilitam muito o trabalho, evitando que você precise copiar e colar o mesmo código diversas vezes.
+      </p>
+      <p>
+        Exemplos comuns: repetir tarefas, processar listas, calcular somas acumuladas, etc.
+      </p>
+    </section>
+
+    <!-- 2. Laço for -->
+    <section>
+      <h2>2. Usando o laço <code>for</code></h2>
+      <p>O <code>for</code> é usado quando sabemos o número exato de vezes que queremos repetir algo.</p>
+      <pre><code>for i in range(5):
+    print("Repetição número", i)</code></pre>
+      <p>Esse código imprime cinco mensagens, numeradas de 0 a 4.</p>
+    </section>
+
+    <!-- 3. Laço while -->
+    <section>
+      <h2>3. Usando o laço <code>while</code></h2>
+      <p>O <code>while</code> repete um bloco enquanto uma condição for verdadeira. É ideal quando você não sabe exatamente quantas vezes o código será repetido.</p>
+      <pre><code>contador = 0
+while contador < 5:
+    print("Contador:", contador)
+    contador += 1</code></pre>
+      <p>Este código também imprime a contagem de 0 até 4.</p>
+    </section>
+
+    <!-- 4. Diferenças principais -->
+    <section>
+      <h2>4. Diferenças entre <code>for</code> e <code>while</code></h2>
+      <ul>
+        <li><strong><code>for</code>:</strong> melhor para repetir um código um número fixo de vezes.</li>
+        <li><strong><code>while</code>:</strong> melhor quando a repetição depende de uma condição que pode mudar.</li>
+      </ul>
+    </section>
+
+    <!-- 5. Comandos especiais: break e continue -->
+    <section>
+      <h2>5. Comandos especiais: <code>break</code> e <code>continue</code></h2>
+      <p>Dentro dos laços de repetição, existem dois comandos importantes que ajudam a controlar o fluxo:</p>
+      <ul>
+        <li>
+          <strong><code>break</code></strong>: interrompe imediatamente o laço, saindo dele, mesmo que a condição ainda seja verdadeira.<br />
+          <em>Exemplo:</em>
+          <pre><code>for i in range(10):
+    if i == 5:
+        break
+    print(i)</code></pre>
+          <p>Esse código imprime os números de 0 a 4 e para o laço quando <code>i</code> chega a 5.</p>
+        </li>
+        <li>
+          <strong><code>continue</code></strong>: pula a iteração atual e passa para a próxima repetição do laço, sem executar o código que vem depois do <code>continue</code> dentro do bloco.<br />
+          <em>Exemplo:</em>
+          <pre><code>for i in range(5):
+    if i == 3:
+        continue
+    print(i)</code></pre>
+          <p>Esse código imprime 0, 1, 2 e 4, pulando o número 3.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 6. Boas práticas -->
+    <section>
+      <h2>6. Boas práticas</h2>
+      <ul>
+        <li>Evite laços infinitos: cuide para que a condição do <code>while</code> possa se tornar falsa.</li>
+        <li>Use nomes claros para variáveis (ex: <code>contador</code>, <code>indice</code>).</li>
+        <li>Indentação correta é essencial para o Python entender o código.</li>
+        <li>Comente seu código para facilitar a leitura.</li>
+      </ul>
+    </section>
+
+    
+
+<section class="quiz">
+  <h2>Quiz: Teste seus conhecimentos sobre laços</h2>
+  <form id="quiz-form-lacos">
+
+    <!-- Questão 1 -->
+    <div class="pergunta">
+      <p>1. Qual estrutura é ideal quando sabemos quantas vezes repetir?</p>
+      <label><input type="radio" name="q1" value="a"> <code>while</code></label><br>
+      <label><input type="radio" name="q1" value="b"> <code>for</code></label><br>
+      <label><input type="radio" name="q1" value="c"> <code>if</code></label>
+    </div>
+
+    <!-- Questão 2 -->
+    <div class="pergunta">
+      <p>2. O que causa um laço <code>while</code> infinito?</p>
+      <label><input type="radio" name="q2" value="a"> A condição ser falsa no início</label><br>
+      <label><input type="radio" name="q2" value="b"> A condição nunca mudar para falsa</label><br>
+      <label><input type="radio" name="q2" value="c"> Usar <code>break</code></label>
+    </div>
+
+    <!-- Questão 3 -->
+    <div class="pergunta">
+      <p>3. O que faz o comando <code>break</code>?</p>
+      <label><input type="radio" name="q3" value="a"> Pula para a próxima iteração</label><br>
+      <label><input type="radio" name="q3" value="b"> Interrompe o laço imediatamente</label><br>
+      <label><input type="radio" name="q3" value="c"> Reinicia o laço</label>
+    </div>
+
+    <!-- Questão 4 -->
+    <div class="pergunta">
+      <p>4. O que faz o comando <code>continue</code>?</p>
+      <label><input type="radio" name="q4" value="a"> Termina o laço</label><br>
+      <label><input type="radio" name="q4" value="b"> Pula a próxima iteração</label><br>
+      <label><input type="radio" name="q4" value="c"> Interrompe o programa</label>
+    </div>
+
+    <!-- Questão 5 - Código -->
+    <div class="pergunta">
+      <p>5. Qual será a saída?</p>
+      <pre><code>for i in range(3):  
+    print(i * 2)</code></pre>
+      <label><input type="radio" name="q5" value="a"> 1 2 3</label><br>
+      <label><input type="radio" name="q5" value="b"> 0 2 4</label><br>
+      <label><input type="radio" name="q5" value="c"> 2 4 6</label>
+    </div>
+
+    <!-- Botão -->
+    <button type="button" onclick="verificarQuizLacos()">Verificar respostas</button>
+  </form>
+
+  <div id="resultado-lacos" style="margin-top: 20px; font-weight: bold;"></div>
+</section>
+
+
+    <!-- Desafio Prático -->
+    <section class="desafio">
+      <h2>💡 Desafio Prático: Soma de números</h2>
+      <p>
+        Crie um programa em Python que peça para o usuário digitar 5 números e, ao final, mostre a soma total desses números.
+      </p>
+      <p><strong>Regras:</strong></p>
+      <ul>
+        <li>Use um laço <code>for</code> ou <code>while</code> para receber os 5 números.</li>
+        <li>Use a função <code>input()</code> para receber cada número do usuário.</li>
+        <li>Converta os valores para inteiros usando <code>int()</code>.</li>
+        <li>Acumule a soma em uma variável e mostre o resultado no final.</li>
+      </ul>
+      <p>Exemplo de saída esperada:</p>
+      <pre><code>Digite o número 1: 3
+Digite o número 2: 10
+Digite o número 3: 7
+Digite o número 4: 2
+Digite o número 5: 5
+A soma dos números é 27</code></pre>
+      <p>Agora é com você! ✨</p>
+    </section>
+
+    <div class="voltar">
+      <a href="index.html">⬅ Voltar à Página Inicial</a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

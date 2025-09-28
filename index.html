@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorial de Python para Iniciantes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina_inicial">
+
+  <main>
+    <h1>Bem-vindo ao Tutorial de Python</h1>
+    <p>Escolha um tema para começar:</p>
+
+    <div class="botoes-temas">
+      <button onclick="irPara('introducao.html')">Introdução</button>
+      <button onclick="irPara('variaveis.html')">Variáveis</button>
+      <button onclick="irPara('condicionais.html')">Condicionais</button>
+      <button onclick="irPara('estruturas_de_repeticao.html')">Laços de Repetição</button>
+      
+    </div>
+  </main>
+
+ 
+  <script>
+    function irPara(pagina) {
+      window.location.href = pagina;
+    }
+  </script>
+</body>
+</html>

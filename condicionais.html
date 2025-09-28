@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Condicionais em Python</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Condicionais em Python</h1>
+  </header>
+
+  <main>
+    <h2>1. O que são estruturas condicionais?</h2>
+    <p>Estruturas condicionais são usadas para que o programa tome decisões. Elas executam diferentes blocos de código dependendo se uma condição é verdadeira ou falsa. Por exemplo: se a pessoa tem 18 anos ou mais, pode votar; caso contrário, não pode.</p>
+
+
+    <h2>2. Como usar <code>if</code>, <code>elif</code> e <code>else</code>?</h2>
+
+    <ul>
+      <li><strong><code>if</code></strong> → se uma determinada condição for satisfeita, executa o bloco de código.</li>
+      <li><strong><code>else</code></strong> → se a condição do <code>if</code> não for satisfeita, executa este bloco de código.</li>
+    </ul>
+
+    <p>Exemplo:</p>
+
+    <pre><code class="language-python">
+idade = 19
+
+if idade >= 18:
+    print("Você é maior de idade.")
+else:
+    print("Você é menor de idade.")
+    </code></pre>
+
+    <p>No código acima, a variável <code>idade</code> recebe o valor 19. O <code>if</code> verifica se a idade é maior ou igual a 18. Como a condição é verdadeira, será exibida a mensagem:</p>
+    <pre><code>Você é maior de idade.</code></pre>
+
+    <p>Se a condição fosse falsa, o bloco do <code>else</code> seria executado:</p>
+    <pre><code>Você é menor de idade.</code></pre>
+
+    <p>Existe ainda o <code>elif</code>, que significa "else if". Ele é usado para verificar múltiplas condições. Caso a primeira condição (<code>if</code>) seja falsa, o programa testa as condições dos <code>elif</code> seguintes.</p>
+
+    <p>Se nenhuma das condições for verdadeira, o <code>else</code> será executado.</p>
+
+    <p>Exemplo:</p>
+
+    <pre><code class="language-python">
+idade = 17
+
+if idade >= 18:
+    print("Você é maior de idade.")
+elif idade >= 16:
+    print("Você pode votar, mas não é maior de idade.")
+else:
+    print("Você ainda não pode votar.")
+    </code></pre>
+
+
+
+    <!--condicional aninhada-->
+    <h2>3. Condicional Aninhada</h2>
+    <p>Em Python, você pode colocar um <code>if</code> dentro de outro. Isso é chamado de <strong>condicional aninhada</strong>. É útil quando você precisa verificar uma condição <em>dentro</em> de outra.</p>
+
+    <p>Exemplo:</p>
+
+    <pre><code>idade = 20
+    tem_carteira = True
+
+    if idade >= 18:
+        if tem_carteira:
+            print("Pode dirigir.")
+        else:
+            print("Precisa tirar a carteira.")
+    else:
+        print("Menor de idade.")</code></pre>
+
+    <p><strong>Como funciona:</strong></p>
+    <ul>
+      <li>Se a pessoa tem <code>18 anos ou mais</code>, o programa verifica se ela tem <code>carteira de motorista</code>.</li>
+      <li>Se ela tiver, pode dirigir. Se não tiver, precisa tirar a carteira.</li>
+      <li>Se tiver menos de 18, o programa nem checa a carteira — já mostra que é menor de idade.</li>
+    </ul>
+
+    <br>
+
+
+
+    <!--operadores-->
+    <h2>4. Operadores usados em estruturas condicionais</h2>
+
+    <p>
+      Para que o <code>if</code> funcione corretamente, é necessário avaliar uma <strong>condição</strong>. Essas condições normalmente comparam valores ou verificam estados, e para isso usamos <strong>operadores de comparação</strong> e <strong>operadores lógicos</strong>.
+    </p>
+
+    <h3>Operadores de comparação</h3>
+    <table border="1" cellpadding="8" style="border-collapse: collapse; margin-bottom: 20px;">
+      <thead style="background-color: #e0f0fa;">
+        <tr>
+          <th>Operador</th>
+          <th>Significado</th>
+          <th>Exemplo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>==</code></td>
+          <td>Igual a</td>
+          <td><code>idade == 18</code></td>
+        </tr>
+        <tr>
+          <td><code>!=</code></td>
+          <td>Diferente de</td>
+          <td><code>nota != 10</code></td>
+        </tr>
+        <tr>
+          <td><code>&gt;</code></td>
+          <td>Maior que</td>
+          <td><code>salario &gt; 2000</code></td>
+        </tr>
+        <tr>
+          <td><code>&lt;</code></td>
+          <td>Menor que</td>
+          <td><code>idade &lt; 18</code></td>
+        </tr>
+        <tr>
+          <td><code>&gt;=</code></td>
+          <td>Maior ou igual a</td>
+          <td><code>nota >= 7</code></td>
+        </tr>
+        <tr>
+          <td><code>&lt;=</code></td>
+          <td>Menor ou igual a</td>
+          <td><code>idade &lt;= 12</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Operadores lógicos</h3>
+    <table border="1" cellpadding="8" style="border-collapse: collapse;">
+      <thead style="background-color: #e0f0fa;">
+        <tr>
+          <th>Operador</th>
+          <th>Nome</th>
+          <th>Uso</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>and</code></td>
+          <td>E lógico</td>
+          <td>Todas as condições precisam ser verdadeiras</td>
+        </tr>
+        <tr>
+          <td><code>or</code></td>
+          <td>OU lógico</td>
+          <td>Pelo menos uma condição precisa ser verdadeira</td>
+        </tr>
+        <tr>
+          <td><code>not</code></td>
+          <td>Negação</td>
+          <td>Inverte o valor lógico (True vira False e vice-versa)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Exemplo com operadores lógicos:</strong></p>
+    <pre><code class="language-python">
+    idade = 20
+    tem_carteira = True
+
+    if idade >= 18 and tem_carteira:
+        print("Pode dirigir")
+    else:
+        print("Não pode dirigir")
+    </code></pre>
+
+
+
+
+
+
+    <h2>5. Boas práticas</h2>
+    <ul>
+      <li>Use indentação correta (Python exige isso!)</li>
+      <li>Deixe as condições claras e objetivas</li>
+      <li>Evite usar <code>elif</code> em excesso — use <code>else</code> para cobrir os casos restantes</li>
+    </ul>
+
+
+
+
+<!--quiz-->
+<section class="quiz">
+  <h2>Quiz: Teste seus conhecimentos sobre condicionais</h2>
+
+  <form id="quiz-form-condicionais">
+    <!-- Pergunta 1 -->
+    <div class="pergunta">
+      <p>1. Qual palavra-chave usamos para testar uma condição inicial em Python?</p>
+      <label><input type="radio" name="q1" value="a"> elif</label><br>
+      <label><input type="radio" name="q1" value="b"> else</label><br>
+      <label><input type="radio" name="q1" value="c"> if</label><br>
+    </div>
+
+    <!-- Pergunta 2 -->
+    <div class="pergunta">
+      <p>2. O que acontece se você esquecer a indentação dentro de um <code>if</code>?</p>
+      <label><input type="radio" name="q2" value="a"> Nada, o código ainda funciona</label><br>
+      <label><input type="radio" name="q2" value="b"> O Python exibirá um erro</label><br>
+      <label><input type="radio" name="q2" value="c"> A condição será ignorada</label><br>
+    </div>
+
+    <!-- Pergunta 3 -->
+    <div class="pergunta">
+      <p>3. Para testar uma condição adicional após o <code>if</code>, usamos:</p>
+      <label><input type="radio" name="q3" value="a"> elif</label><br>
+      <label><input type="radio" name="q3" value="b"> else if</label><br>
+      <label><input type="radio" name="q3" value="c"> elseif</label><br>
+    </div>
+
+    <!-- Pergunta 4 -->
+    <div class="pergunta">
+      <p>4. Qual saída o código abaixo exibirá?<br><code>idade = 16<br>if idade >= 18:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Adulto")<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Menor")</code></p>
+      <label><input type="radio" name="q4" value="a"> Adulto</label><br>
+      <label><input type="radio" name="q4" value="b"> Menor</label><br>
+      <label><input type="radio" name="q4" value="c"> Nada será exibido</label><br>
+    </div>
+
+    <!-- Pergunta 5 -->
+    <div class="pergunta">
+      <p>5. Em qual alternativa todas as palavras são usadas corretamente em estruturas condicionais?</p>
+      <label><input type="radio" name="q5" value="a"> if, elif, then</label><br>
+      <label><input type="radio" name="q5" value="b"> if, elif, else</label><br>
+      <label><input type="radio" name="q5" value="c"> when, elif, else</label><br>
+    </div>
+
+
+<section class="preencher-codigo">
+    <!-- Pergunta 6 -->
+<div class="pergunta">
+  <p>6. Complete o código para verificar se um número é positivo, negativo ou zero:</p>
+  <pre><code>
+numero = 0
+<input type="text" name="q6_1" placeholder="???"> numero > 0:
+    print("Número positivo")
+<input type="text" name="q6_2" placeholder="???"> numero < 0:
+    print("Número negativo")
+<input type="text" name="q6_3" placeholder="???">:
+    print("Número zero")
+  </code></pre>
+</div>
+
+<!-- Pergunta 7 -->
+<div class="pergunta">
+  <p>7. Complete o código para verificar se alguém pode dirigir:</p>
+  <pre><code>
+idade = 20
+tem_carteira = True
+<input type="text" name="q7_1" placeholder="???"> idade >= 18 and tem_carteira:
+    print("Pode dirigir")
+<input type="text" name="q7_2" placeholder="???">:
+    print("Não pode dirigir")
+  </code></pre>
+</div>
+
+<!-- Pergunta 8 -->
+<div class="pergunta">
+  <p>8. Complete o código para verificar se a pessoa é maior de idade e se está estudando:</p>
+  <pre><code>
+idade = 18
+estudando = True
+<input type="text" name="q8_1" placeholder="???"> idade >= 18:
+    <input type="text" name="q8_2" placeholder="???"> estudando:
+        print("Maior de idade e estudando")
+    <input type="text" name="q8_3" placeholder="???">:
+        print("Maior de idade, mas não estuda")
+  </code></pre>
+</div>
+
+
+
+<!--botao quiz-->
+</section>
+    <button type="button" onclick="verificarQuizCondicionais()">Verificar respostas</button>
+  </form>
+
+  <div id="resultado-condicionais" style="margin-top:20px; font-weight:bold;"></div>
+</section>
+
+
+<!-- Pergunta 9 -->
+<div class="pergunta">
+  <p><strong>9. Monte o código</strong>: Verifique se o número é par ou ímpar. A variável <code>numero = 8</code> já está definida.</p>
+
+  <form id="pergunta9-blocos">
+    <select name="linha1">
+      <option value="">-- Escolha a linha 1 --</option>
+      <option value="if">if numero % 2 == 0:</option>
+      <option value="else">else:</option>
+      <option value="print_par">print("Número par")</option>
+      <option value="print_impar">print("Número ímpar")</option>
+    </select><br><br>
+
+    <select name="linha2">
+      <option value="">-- Escolha a linha 2 --</option>
+      <option value="if">if numero % 2 == 0:</option>
+      <option value="else">else:</option>
+      <option value="print_par">print("Número par")</option>
+      <option value="print_impar">print("Número ímpar")</option>
+    </select><br><br>
+
+    <select name="linha3">
+      <option value="">-- Escolha a linha 3 --</option>
+      <option value="if">if numero % 2 == 0:</option>
+      <option value="else">else:</option>
+      <option value="print_par">print("Número par")</option>
+      <option value="print_impar">print("Número ímpar")</option>
+    </select><br><br>
+
+    <select name="linha4">
+      <option value="">-- Escolha a linha 4 --</option>
+      <option value="if">if numero % 2 == 0:</option>
+      <option value="else">else:</option>
+      <option value="print_par">print("Número par")</option>
+      <option value="print_impar">print("Número ímpar")</option>
+    </select><br><br>
+
+    <button type="button" onclick="verificarPergunta9()">Verificar resposta</button>
+    <div id="resultado-pergunta9" style="margin-top:10px; font-weight:bold;"></div>
+  </form>
+</div>
+
+
+<!-- Pergunta 10-->
+<div class="pergunta">
+  <p><strong>10. Monte o código</strong>: Verifique se o número é múltiplo de 4 ou 6 usando <code>if / elif / else</code>. A variável <code>numero = 12</code> já está definida.</p>
+
+  <form id="pergunta10-blocos">
+    <select name="linha1">
+      <option value="">-- Escolha a linha 1 --</option>
+      <option value="if4">if numero % 4 == 0:</option>
+      <option value="elif6">elif numero % 6 == 0:</option>
+      <option value="print4">print("Múltiplo de 4")</option>
+      <option value="print6">print("Múltiplo de 6")</option>
+      <option value="print_nao">print("Não é múltiplo de 4 nem de 6")</option>
+      <option value="else">else:</option>
+    </select><br><br>
+
+    <select name="linha2">
+      <option value="">-- Escolha a linha 2 --</option>
+      <option value="if4">if numero % 4 == 0:</option>
+      <option value="elif6">elif numero % 6 == 0:</option>
+      <option value="print4">print("Múltiplo de 4")</option>
+      <option value="print6">print("Múltiplo de 6")</option>
+      <option value="print_nao">print("Não é múltiplo de 4 nem de 6")</option>
+      <option value="else">else:</option>
+    </select><br><br>
+
+    <select name="linha3">
+      <option value="">-- Escolha a linha 3 --</option>
+      <option value="if4">if numero % 4 == 0:</option>
+      <option value="elif6">elif numero % 6 == 0:</option>
+      <option value="print4">print("Múltiplo de 4")</option>
+      <option value="print6">print("Múltiplo de 6")</option>
+      <option value="print_nao">print("Não é múltiplo de 4 nem de 6")</option>
+      <option value="else">else:</option>
+    </select><br><br>
+
+    <select name="linha4">
+      <option value="">-- Escolha a linha 4 --</option>
+      <option value="if4">if numero % 4 == 0:</option>
+      <option value="elif6">elif numero % 6 == 0:</option>
+      <option value="print4">print("Múltiplo de 4")</option>
+      <option value="print6">print("Múltiplo de 6")</option>
+      <option value="print_nao">print("Não é múltiplo de 4 nem de 6")</option>
+      <option value="else">else:</option>
+    </select><br><br>
+
+    <button type="button" onclick="verificarPergunta10()">Verificar resposta</button>
+    <div id="resultado-pergunta10" style="margin-top:10px; font-weight:bold;"></div>
+  </form>
+</div>
+
+
+
+<!--desafio-->
+<!-- Desafio Prático -->
+<section class="desafio">
+  <h2>💡 Desafio Prático: Classificador de Idade</h2>
+  <p>Crie um programa em Python que pergunte a idade de uma pessoa e exiba uma mensagem informando em que fase da vida ela está.</p>
+
+  <p><strong>Regras:</strong></p>
+  <ul>
+    <li>Menor que 12 anos → <strong>Criança</strong></li>
+    <li>De 12 a 17 anos → <strong>Adolescente</strong></li>
+    <li>De 18 a 59 anos → <strong>Adulto</strong></li>
+    <li>60 anos ou mais → <strong>Idoso</strong></li>
+  </ul>
+
+  <p>💬 Use estruturas condicionais como <code>if</code>, <code>elif</code> e <code>else</code> para implementar sua lógica.</p>
+
+  <p>📌 Exemplo de saída esperada:</p>
+  <pre><code>Digite sua idade: 25
+Você é um adulto.</code></pre>
+
+  <p>Agora é com você! ✨</p>
+</section>
+
+
+
+    <div class="voltar">
+      <a href="index.html">⬅ Voltar à Página Inicial</a>
+    </div>
+  </main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

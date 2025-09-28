@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introdução ao Python - Tutorial para Iniciantes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Começando com Python</h1>
+  </header>
+
+  <main>
+    <!-- O que é Python -->
+    <section>
+      <h2>O que é Python?</h2>
+      <p>
+        Python é uma linguagem de programação muito usada no mundo todo, tanto por iniciantes quanto por profissionais. Ela é conhecida por ser:
+      </p>
+      <ul>
+        <li>Fácil de aprender</li>
+        <li>Usada em várias áreas (dados, jogos, sites, automações)</li>
+        <li>Gratuita e de código aberto</li>
+        <li>Com uma comunidade enorme ajudando a evoluir a linguagem</li>
+      </ul><br>
+    </section>
+
+    <!-- Onde o Python é usado -->
+    <section>
+      <h2>Onde o Python é usado?</h2>
+      <p>Com Python, você pode:</p>
+      <ul>
+        <li>💻 Criar sites</li>
+        <li>📊 Analisar dados e gerar gráficos</li>
+        <li>🤖 Trabalhar com inteligência artificial</li>
+        <li>🎮 Criar jogos</li>
+        <li>🛠️ Automatizar tarefas no seu computador</li>
+      </ul><br>
+    </section>
+
+    <!-- Como instalar -->
+    <section>
+      <h2>Como instalar o Python?</h2>
+      <p>
+        Para começar, acesse o site oficial do Python:
+        <a href="https://www.python.org" target="_blank" rel="noopener noreferrer">www.python.org</a>
+      </p>
+      <p>
+        Baixe a versão mais recente para seu sistema operacional (Windows, macOS ou Linux). Durante a instalação, marque a opção
+        <strong>"Add Python to PATH"</strong> e clique em <strong>Install Now</strong>.
+      </p><br>
+    </section>
+
+    <!-- O que é uma IDE -->
+    <section>
+      <h2>O que é uma IDE?</h2>
+      <p>
+        Uma <strong>IDE</strong> (<em>Integrated Development Environment</em> ou Ambiente de Desenvolvimento Integrado) é um programa que ajuda a escrever, testar e executar códigos de forma mais organizada.
+      </p>
+
+      <p>As IDEs costumam oferecer recursos como:</p>
+      <ul>
+        <li>Realce de sintaxe (códigos coloridos)</li>
+        <li>Sugestões automáticas de código</li>
+        <li>Execução com apenas um clique</li>
+        <li>Detecção de erros em tempo real</li>
+      </ul>
+
+      <p>Algumas IDEs muito usadas por quem programa em Python são:</p>
+      <ul>
+        <li><a href="https://www.jetbrains.com/pycharm/download/" target="_blank" rel="noopener noreferrer">PyCharm</a> — muito completo, usado por profissionais</li>
+        <li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code (VS Code)</a> — leve e flexível</li>
+      </ul>
+
+      <h3>Mas neste tutorial, vamos usar o IDLE</h3>
+      <p>
+        O <strong>IDLE</strong> é uma IDE simples que já vem junto com a instalação do Python. Ele é leve, fácil de usar, e ideal para quem está começando. Com ele, você poderá rodar todos os exemplos deste tutorial sem instalar nada a mais.
+      </p>
+
+      <p><strong>Dica:</strong> após instalar o Python, procure por <code>IDLE</code> no menu do seu sistema e abra o programa.</p>
+      <br>
+      <p><img src="img/IDLE_Python.png" alt="Janela do IDLE" style="width: 85%;" /></p>
+      <br>
+      
+    </section>
+
+    <!-- IDLE vs Google Colab -->
+    <section>
+      <h2>Preciso instalar o Python ou posso programar online?</h2>
+      <p>
+        Neste tutorial, vamos usar o <strong>IDLE</strong>, que já vem junto com a instalação do Python. 
+      </p>
+      <p>
+        Mas, se você preferir programar direto no navegador, sem precisar instalar nada, pode usar o <strong><a href="https://colab.research.google.com" target="_blank" rel="noopener noreferrer">Google Colab</a></strong>.
+      </p>
+      <p>
+        O Google Colab permite escrever código em blocos, salvar seus projetos no Google Drive e compartilhar com outras pessoas facilmente. Ele é muito usado para trabalhos com dados, ciência, e aprendizado de máquina.
+      </p><br>
+    </section>
+
+    <!-- Primeiro código -->
+    <section>
+      <h2>Seu primeiro código em Python</h2>
+      <p>Abra o <strong>IDLE</strong> e digite o seguinte código:</p>
+
+      <pre><code>print("Olá, mundo!")</code></pre>
+
+      <p>Ao pressionar Enter ou clicar em "Run", o Python exibirá na tela:</p>
+
+      <pre><code>Olá, mundo!</code></pre>
+
+      <p>Parabéns! 🎉 Você acabou de escrever e executar seu primeiro programa em Python!</p><br>
+    </section>
+
+    <!-- Indentação -->
+    <section>
+      <h2>Indentação no Python</h2>
+      <p>
+        Diferente de outras linguagens que usam chaves (<code>{}</code>) para definir blocos de código, o Python usa a <strong>indentação</strong> (espaços à esquerda da linha) para indicar o que pertence a cada bloco.
+      </p>
+
+      <p>
+        Por exemplo, ao escrever uma condição <code>if</code>, o que estiver indentado (com espaço ou tabulação) abaixo dela será considerado parte do bloco:
+      </p>
+
+      <pre><code>idade = 18
+
+if idade >= 18:
+    print("Você é maior de idade!")</code></pre>
+
+      <p>
+        Se você esquecer de indentar ou usar uma indentação errada, o Python vai mostrar um erro:
+      </p>
+
+      <pre><code>if idade >= 18:
+print("Você é maior de idade!")  # ❌ Erro de indentação</code></pre>
+
+      <h3>Quantos espaços usar?</h3>
+      <p>
+        A convenção mais usada é <strong>4 espaços</strong> por nível de indentação. Evite misturar <code>Tab</code> e <code>Espaços</code> no mesmo arquivo, pois isso pode causar erros difíceis de detectar.
+      </p>
+
+      <p><strong>Dica:</strong> As IDEs como IDLE ou VS Code já fazem essa indentação automaticamente para você!</p><br>
+    </section>
+
+    <!-- Voltar -->
+    <div class="voltar">
+      <a href="index.html">⬅ Voltar à Página Inicial</a>
+    </div>
+  </main>
+</body>
+</html>

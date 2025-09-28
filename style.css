@@ -1,0 +1,188 @@
+/* style.css */
+
+/* Cores base */
+:root {
+  --cor-principal: #6dc1df;
+  --cor-secundaria: #73d373;
+  --cor-fundo: #fefefe;
+  --cor-texto: #333;
+  --cor-botao: #69c169;
+  --cor-botao-hover: #77bb77;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+  background-color: var(--cor-principal);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+h1, h2 {
+  color: #2a6f97;
+}
+
+pre {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+/* Botão voltar */
+.voltar {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.voltar a {
+  text-decoration: none;
+  color: white;
+  background-color: var(--cor-botao);
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.voltar a:hover {
+  background-color: var(--cor-botao-hover);
+}
+
+/* Botões da home */
+.botoes-temas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.botoes-temas button {
+  background-color: var(--cor-botao);
+  color: white;
+  padding: 12px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 150px;
+}
+
+.botoes-temas button:hover {
+  background-color: var(--cor-botao-hover);
+}
+
+
+
+
+
+
+/* Estilo específico da página inicial */
+body.pagina_inicial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  background-color: var(--cor-fundo);
+}
+
+body.pagina_inicial main {
+  background-color: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 100%;
+}
+
+body.pagina_inicial h1 {
+  font-size: 2.5em;
+  color: var(--cor-principal);
+  margin-bottom: 20px;
+}
+
+body.pagina_inicial p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+
+
+#quiz {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pergunta {
+  margin-bottom: 20px;
+}
+
+.quiz h2 {
+  color: #2a6f97;
+  margin-bottom: 15px;
+}
+.quiz button {
+  background-color: var(--cor-botao);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.quiz button:hover {
+  background-color: var(--cor-botao-hover);
+}
+
+
+.desafio {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #fff8e1;
+  border-left: 5px solid #fbc02d;
+  border-radius: 10px;
+}
+.desafio h2 {
+  color: #f57f17;
+}
+

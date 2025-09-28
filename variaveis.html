@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Variáveis em Python</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Variáveis em Python</h1>
+  </header>
+
+  <main>
+    <!-- Seção 1 -->
+    <h2>1. O que são variáveis?</h2>
+    <p>Variáveis são "caixinhas" onde podemos guardar informações. Elas nos ajudam a armazenar e manipular dados ao longo do programa.</p><br>
+
+    <!-- Seção 2 -->
+    <h2>2. Como criar uma variável?</h2>
+    <p>Em Python, não é necessário declarar o tipo da variável. Basta escolher um nome e atribuir um valor com o sinal de igual (<code>=</code>).</p>
+
+    <pre><code>nome = "Maria"      # Tipo: str
+idade = 25          # Tipo: int
+altura = 1.68       # Tipo: float
+estudando = True    # Tipo: bool</code></pre><br>
+
+    <!-- Seção 3 -->
+    <h2>3. Nomes válidos e inválidos de variáveis</h2>
+    <p>Ao criar variáveis em Python, é importante seguir algumas regras para que o nome seja aceito pela linguagem.</p>
+
+    <h3>✔️ Regras para nomes válidos:</h3>
+    <ul>
+      <li>Devem começar com uma <strong>letra</strong> (a-z, A-Z) ou <strong>underline</strong> (_)</li>
+      <li>Podem conter letras, números e underlines</li>
+      <li>Não podem conter espaços ou caracteres especiais (como @, #, %, etc.)</li>
+      <li>Não podem ser palavras reservadas do Python (ex: <code>if</code>, <code>for</code>, <code>class</code>, etc.)</li>
+    </ul>
+
+    <h3>✅ Exemplos de nomes válidos:</h3>
+    <pre><code>nome = "Ana"
+idade1 = 22
+_altura = 1.65
+curso_de_python = True</code></pre>
+
+    <h3>❌ Exemplos de nomes inválidos:</h3>
+    <pre><code>1nome = "Erro"       # Não pode começar com número
+altura-média = 1.70  # Hífen não é permitido
+curso de python = True  # Espaços não são permitidos
+for = "Laço"         # 'for' é palavra reservada do Python</code></pre>
+
+    <div class="atencao">
+      ⚠️ <strong>Atenção:</strong> Python diferencia letras maiúsculas e minúsculas. As variáveis <code>Nome</code> e <code>nome</code> são diferentes!
+    </div><br>
+
+    <!-- Seção 4 -->
+    <h2>4. Tipos de dados comuns</h2>
+    <ul>
+      <li><code>int</code> → números inteiros (ex: <code>10</code>, <code>-3</code>)</li>
+      <li><code>float</code> → números decimais (ex: <code>3.14</code>, <code>2.0</code>)</li>
+      <li><code>str</code> → texto ou cadeia de caracteres (ex: <code>"Olá"</code>)</li>
+      <li><code>bool</code> → valores lógicos (<code>True</code> ou <code>False</code>)</li>
+    </ul><br>
+
+    <!-- Seção 5 -->
+    <h2>5. O que acontece se eu usar uma variável sem atribuir valor?</h2>
+    <p>Em Python, você precisa <strong>atribuir um valor</strong> a uma variável antes de usá-la. Caso contrário, o programa exibirá um erro chamado <code>NameError</code>, informando que a variável não foi definida.</p>
+
+    <pre><code>print(nome)</code></pre>
+
+    <p>Esse código vai gerar o seguinte erro:</p>
+
+    <pre><code>NameError: name 'nome' is not defined</code></pre>
+
+    <p>Ou seja, o Python está dizendo que não sabe o que é <code>nome</code> porque ela nunca foi criada ou não está acessível naquele momento do código.</p>
+
+    <p>Para evitar isso, sempre atribua um valor antes de usar a variável:</p>
+
+    <pre><code>nome = "Carlos"
+    print(nome)</code></pre><br>
+
+
+
+    <!--seção 6-->
+    <h2>6. Exemplo prático</h2>
+    <p>Veja um exemplo completo de uso de variáveis:</p>
+
+    <pre><code>nome = "Lucas"
+idade = 20
+altura = 1.75
+estudando = True
+
+print("Nome:", nome)
+print("Idade:", idade)
+print("Altura:", altura)
+print("Está estudando?", estudando)</code></pre>
+
+    <p>Esse código declara variáveis e imprime seus valores. É uma forma simples de começar a entender como os dados são manipulados no Python.</p><br>
+
+
+  <!-- Seção 7 -->
+<h2>7. Recebendo dados do usuário: função <code>input()</code></h2>
+<p>Você também pode atribuir valores às variáveis com base no que o usuário digita, usando a função <code>input()</code>.</p>
+
+<p>Por padrão, tudo que vem do <code>input()</code> é do tipo <strong>texto (str)</strong>. Se você quiser trabalhar com números, precisará converter o valor.</p>
+
+<pre><code># Exemplo com texto
+nome = input("Digite seu nome: ")
+print("Olá,", nome)
+
+# Exemplo com número (convertendo para inteiro)
+idade = int(input("Digite sua idade: "))
+print("Você tem", idade, "anos")
+</code></pre>
+
+<div class="atencao">
+⚠️ <strong>Atenção:</strong> use <code>int()</code> ou <code>float()</code> se quiser tratar números. Caso contrário, o Python vai considerar como texto.
+</div>
+
+
+
+<section class="quiz">
+  <h2>Quiz rápido: Teste seus conhecimentos</h2>
+
+  <form id="quiz-form">
+    <!-- Pergunta 1 -->
+    <div class="pergunta">
+      <p>1. Qual dessas opções é um nome válido para variável em Python?</p>
+      <label><input type="radio" name="q1" value="a"> 1nome</label><br>
+      <label><input type="radio" name="q1" value="b"> nome_1</label><br>
+      <label><input type="radio" name="q1" value="c"> nome-1</label><br>
+    </div>
+
+    <!-- Pergunta 2 -->
+    <div class="pergunta">
+      <p>2. Qual tipo de dado representa valores lógicos em Python?</p>
+      <label><input type="radio" name="q2" value="a"> int</label><br>
+      <label><input type="radio" name="q2" value="b"> bool</label><br>
+      <label><input type="radio" name="q2" value="c"> str</label><br>
+    </div>
+
+    <!-- Pergunta 3 -->
+    <div class="pergunta">
+      <p>3. O que acontece se você tentar usar uma variável sem atribuir um valor primeiro?</p>
+      <label><input type="radio" name="q3" value="a"> O Python atribui automaticamente 0</label><br>
+      <label><input type="radio" name="q3" value="b"> O programa exibe uma mensagem de erro</label><br>
+      <label><input type="radio" name="q3" value="c"> A variável será considerada como texto vazio</label><br>
+    </div>
+
+    <!-- Pergunta 4 -->
+    <div class="pergunta">
+      <p>4. Qual dessas variáveis tem um nome inválido em Python?</p>
+      <label><input type="radio" name="q4" value="a"> _altura</label><br>
+      <label><input type="radio" name="q4" value="b"> idade1</label><br>
+      <label><input type="radio" name="q4" value="c"> curso de python</label><br>
+    </div>
+
+    <!-- Pergunta 5 -->
+    <div class="pergunta">
+      <p>5. Qual valor é do tipo <code>float</code>?</p>
+      <label><input type="radio" name="q5" value="a"> 25</label><br>
+      <label><input type="radio" name="q5" value="b"> "25"</label><br>
+      <label><input type="radio" name="q5" value="c"> 25.0</label><br>
+    </div>
+
+
+
+    <!-- Botão -->
+    <button type="button" onclick="verificarQuizVariaveis()">Verificar respostas</button>
+  </form>
+
+  <div id="resultado" style="margin-top:20px; font-weight:bold;"></div>
+</section>
+
+
+  <!-- Desafio Prático -->
+<section class="desafio">
+  <h2>💡 Desafio Prático: Classificador de Idade</h2>
+  <p>Crie um programa em Python que pergunte a idade de uma pessoa e exiba uma mensagem informando em que fase da vida ela está.</p>
+
+  <p><strong>Regras:</strong></p>
+  <ul>
+    <li>Menor que 12 anos → <strong>Criança</strong></li>
+    <li>De 12 a 17 anos → <strong>Adolescente</strong></li>
+    <li>De 18 a 59 anos → <strong>Adulto</strong></li>
+    <li>60 anos ou mais → <strong>Idoso</strong></li>
+  </ul>
+
+  <p>💬 Use estruturas condicionais como <code>if</code>, <code>elif</code> e <code>else</code> para implementar sua lógica.</p>
+
+  <p>📌 Exemplo de saída esperada:</p>
+  <pre><code>Digite sua idade: 25
+Você é um adulto.</code></pre>
+
+  <p>Agora é com você! ✨</p>
+</section>
+
+
+
+
+    <!-- Link de volta -->
+    <div class="voltar">
+      <a href="index.html">⬅ Voltar à Página Inicial</a>
+    </div>
+  </main>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
