@@ -186,3 +186,70 @@ body.pagina_inicial p {
   color: #f57f17;
 }
 
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  header {
+    padding: 15px 0;
+    font-size: 1em;
+  }
+
+  main {
+    padding: 20px 10px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  .botoes-temas {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .botoes-temas button {
+    width: 100%;
+    max-width: 300px;
+    font-size: 1em;
+  }
+
+  .voltar a {
+    padding: 8px 16px;
+    font-size: 0.95em;
+  }
+
+  body.pagina_inicial main {
+    padding: 20px;
+  }
+
+  body.pagina_inicial h1 {
+    font-size: 2em;
+  }
+
+  body.pagina_inicial p {
+    font-size: 1em;
+  }
+
+  #quiz {
+    padding: 15px;
+  }
+
+  .quiz button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .desafio {
+    padding: 15px;
+  }
+}
+
+
