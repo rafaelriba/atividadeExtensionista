@@ -137,77 +137,8 @@ function verificarQuizCondicionais() {
 }
 
 
-function verificarPergunta10() {
-  const respostaCorreta10 = [
-    "if4",
-    "print4",
-    "elif6",
-    "print6",
-  ];
 
-  const selects = [
-    document.querySelector("select[name='linha1']"),
-    document.querySelector("select[name='linha2']"),
-    document.querySelector("select[name='linha3']"),
-    document.querySelector("select[name='linha4']")
-  ];
 
-  let acertos = 0;
-
-  selects.forEach((select, index) => {
-    if (select.value === respostaCorreta10[index]) {
-      select.style.borderColor = "green";
-      acertos++;
-    } else {
-      select.style.borderColor = "red";
-    }
-  });
-
-  const resultado = document.getElementById("resultado-pergunta10");
-  if (acertos === respostaCorreta10.length) {
-    resultado.textContent = "✅ Código montado corretamente!";
-    resultado.style.color = "green";
-  } else {
-    resultado.textContent = `❌ Há ${respostaCorreta10.length - acertos} erro(s) na ordem dos blocos.`;
-    resultado.style.color = "darkred";
-  }
-}
-
-function verificarPergunta9() {
-  const respostaCorreta9 = [
-    "if",
-    "print_par",
-    "else",
-    "print_impar"
-  ];
-
-  const selects = [
-    document.querySelector("select[name='linha1']"),
-    document.querySelector("select[name='linha2']"),
-    document.querySelector("select[name='linha3']"),
-    document.querySelector("select[name='linha4']")
-  ];
-
-  let acertos = 0;
-
-  selects.forEach((select, index) => {
-    if (select.value === respostaCorreta9[index]) {
-      select.style.borderColor = "green";
-      acertos++;
-    } else {
-      select.style.borderColor = "red";
-    }
-  });
-
-  const resultado = document.getElementById("resultado-pergunta9");
-  if (acertos === respostaCorreta9.length) {
-    resultado.textContent = "✅ Código montado corretamente!";
-    resultado.style.color = "green";
-  } else {
-    resultado.textContent = `❌ Há ${respostaCorreta9.length - acertos} erro(s) na ordem dos blocos.`;
-    resultado.style.color = "darkred";
-  }
-}
 
 
 function verificarQuizLacos() {
@@ -261,6 +192,7 @@ function verificarQuizLacos() {
   resultado.textContent = `Você acertou ${pontos} de ${total} perguntas.`;
   resultado.style.color = (pontos === total) ? 'green' : 'darkred';
 }
+
 
 
 
