@@ -215,8 +215,8 @@ function verificarQuizLacos() {
   const respostasCorretas = {
     q1: 'b',
     q2: 'b',
-    q3: 'b',
-    q4: 'b',
+    q3: 'a',
+    q4: 'c',
     q5: 'b'
   };
 
@@ -262,4 +262,5 @@ function verificarQuizLacos() {
   resultado.textContent = `Você acertou ${pontos} de ${total} perguntas.`;
   resultado.style.color = (pontos === total) ? 'green' : 'darkred';
 }
+
 
