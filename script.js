@@ -63,9 +63,6 @@ function verificarQuizCondicionais() {
     q8_1: 'if',
     q8_2: 'if',
     q8_3: 'else',
-
-    q9_1: 'if',
-    q9_2: 'else',
   };
 
   let pontos = 0;
@@ -192,6 +189,7 @@ function verificarQuizLacos() {
   resultado.textContent = `Você acertou ${pontos} de ${total} perguntas.`;
   resultado.style.color = (pontos === total) ? 'green' : 'darkred';
 }
+
 
 
 
