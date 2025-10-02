@@ -143,7 +143,6 @@ function verificarPergunta10() {
     "print4",
     "elif6",
     "print6",
-    // Pode adicionar else e print_nao aqui, se quiser
   ];
 
   const selects = [
@@ -262,5 +261,6 @@ function verificarQuizLacos() {
   resultado.textContent = `Você acertou ${pontos} de ${total} perguntas.`;
   resultado.style.color = (pontos === total) ? 'green' : 'darkred';
 }
+
 
 
